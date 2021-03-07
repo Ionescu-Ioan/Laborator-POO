@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Ionut/CLionProjects/Tema1-POO/Instrument_muzical.h
+string
+-
+
+C:/Users/Ionut/CLionProjects/Tema1-POO/Muzicant.h
+Persoana.h
+C:/Users/Ionut/CLionProjects/Tema1-POO/Persoana.h
+Instrument_muzical.h
+C:/Users/Ionut/CLionProjects/Tema1-POO/Instrument_muzical.h
+
+C:/Users/Ionut/CLionProjects/Tema1-POO/Persoana.h
+string
+-
+
+C:/Users/Ionut/CLionProjects/Tema1-POO/main.cpp
+iostream
+-
+string
+-
+vector
+-
+Instrument_muzical.h
+C:/Users/Ionut/CLionProjects/Tema1-POO/Instrument_muzical.h
+Persoana.h
+C:/Users/Ionut/CLionProjects/Tema1-POO/Persoana.h
+Muzicant.h
+C:/Users/Ionut/CLionProjects/Tema1-POO/Muzicant.h
+iomanip
+-
+
