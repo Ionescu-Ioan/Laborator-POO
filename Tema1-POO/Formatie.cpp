@@ -3,8 +3,9 @@
 //
 #include "Formatie.h"
 #include <string>
-#include "Persoana.h"
+//#include "Persoana.h"
 #include <iostream>
+
 
 Formatie::Formatie(const std::string &nume_formatie)
 {
