@@ -10,12 +10,14 @@
 class Muzicant
 {
 public:
-    Muzicant(const std::string &nume, const std::string &instrument, int varstas, float pret);
+    Muzicant(std::string nume, std::string instrument, int varstas, float pret);
     Muzicant(const Persoana& p, const Instrument_muzical& i);
     ~Muzicant();
     void set_instrument(Instrument_muzical i);
     Persoana get_persoana();
     Instrument_muzical get_instrument();
+    bool operator ==(const Muzicant&);
+    friend std::ostream& operator <<(std::ostream& , const Muzicant&);
 
 private:
     Persoana pers;

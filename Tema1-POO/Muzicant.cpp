@@ -7,12 +7,12 @@
 #include <string>
 #include <iostream>
 
-Muzicant::Muzicant(const std::string &nume, const std::string &instrument, int varsta, float pret)
+Muzicant::Muzicant(std::string nume, std::string instrument, int varsta, float pret)
 {
-    //pers.set_nume(nume);
-    //pers.set_varsta(varsta);
-    ins = Instrument_muzical(instrument, pret);
-    pers = Persoana(nume, varsta);
+    pers.set_nume(nume);
+    pers.set_varsta(varsta);
+    ins.set_pret(pret);
+    ins.set_denumire(instrument);
 }
 
 Muzicant::Muzicant(const Persoana& p, const Instrument_muzical& i)
@@ -39,4 +39,17 @@ Instrument_muzical Muzicant::get_instrument()
 Muzicant::~Muzicant()
 {
     std::cout << "In destructor muzicant\n";
+}
+
+bool Muzicant::operator ==(const Muzicant& m)
+{
+    if(pers == m.pers && ins == m.ins)
+        return true;
+    return false;
+}
+
+std::ostream& operator <<(std::ostream& out, const Muzicant& m)
+{
+    out << m.pers << " " << m.ins;
+    return out;
 }

@@ -7,6 +7,7 @@
 #include "Persoana.h"
 #include <string>
 #include <iostream>
+
 class Cantaret:public Persoana
 {
 public:
@@ -15,6 +16,7 @@ public:
     ~Cantaret();
     void set_gen_muzical(const std::string &gen);
     std::string get_gen_muzical();
+    bool operator ==(Cantaret&);
 
 private:
     std::string gen_muzical;

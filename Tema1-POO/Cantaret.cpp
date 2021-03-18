@@ -26,3 +26,10 @@ Cantaret::~Cantaret()
 {
     std::cout << "In destructor cantaret\n";
 }
+
+bool Cantaret::operator ==(Cantaret& c)
+{
+    if(this->get_nume() == c.get_nume() && this->get_varsta() == c.get_varsta() && this->gen_muzical == c.gen_muzical)
+        return true;
+    return false;
+}

@@ -5,6 +5,8 @@
 #ifndef TEMA1_POO_INSTRUMENT_MUZICAL_H
 #define TEMA1_POO_INSTRUMENT_MUZICAL_H
 #include <string>
+#include <ostream>
+
 class Instrument_muzical
 {
 public:
@@ -13,6 +15,7 @@ public:
     Instrument_muzical();
     ~Instrument_muzical();
     Instrument_muzical& operator=(const Instrument_muzical&);
+    bool operator ==(const Instrument_muzical&);
 
     float get_pret();
     std::string get_denumire();
@@ -20,7 +23,7 @@ public:
     void set_pret(float);
     void set_denumire(std::string &);
 
-    std::string to_string();
+    friend std::ostream& operator <<(std::ostream&, const Instrument_muzical& );
 
 private:
     std::string denumire;

@@ -3,9 +3,9 @@
 //
 #include "Formatie.h"
 #include <string>
-//#include "Persoana.h"
+#include "Persoana.h"
 #include <iostream>
-
+#include <vector>
 
 Formatie::Formatie(const std::string &nume_formatie)
 {
@@ -45,4 +45,42 @@ std::vector <Melodie> Formatie::get_melodii()
 void Formatie::add_cantaret(const Cantaret& c)
 {
     solisti.push_back(c);
+}
+
+void Formatie::remove_muzicant(const Muzicant& m)
+{
+    for(std::vector <Muzicant>:: iterator it = v.begin(); it != v.end(); ++it)
+        if(*it == m)
+        {
+            v.erase(it);
+            break;
+        }
+}
+
+
+void Formatie::remove_cantaret(Cantaret& c)
+{
+    for(std::vector <Cantaret>:: iterator it = solisti.begin(); it != solisti.end(); ++it)
+        if(*it == c)
+        {
+            solisti.erase(it);
+            break;
+        }
+}
+
+void Formatie::afisare_muzicanti()
+{
+    for(int i=0; i<v.size(); ++i)
+        std::cout<< v[i] << " \n";
+}
+
+void Formatie::add_turneu(const Turneu& t)
+{
+    turnee.push_back(t);
+}
+
+void Formatie::afisare_turnee()
+{
+    for(int i=0; i<turnee.size(); ++i)
+        std::cout << turnee[i];
 }

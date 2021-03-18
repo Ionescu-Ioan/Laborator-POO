@@ -3,7 +3,10 @@
 //
 #include "Instrument_muzical.h"
 #include <string>
+#include <cmath>
 #include <iostream>
+#include "Utilitati.h"
+
 Instrument_muzical::Instrument_muzical(const std::string &denumire, float p)
 {
     this->denumire = denumire;
@@ -42,10 +45,11 @@ void Instrument_muzical::set_denumire(std::string &d)
     denumire = d;
 }
 
-std::string Instrument_muzical::to_string()
-{
-    float f = int(pret*100)/100.0;
-    return denumire + " " + std::to_string(f) + "\n";
+std::ostream& operator <<(std::ostream& out, const Instrument_muzical& i)
+ {
+    //float f = std::round(i.pret*100)/100.0;
+    out << i.denumire + " " + f2s(i.pret) + " ";
+    return out;
 }
 
 Instrument_muzical::~Instrument_muzical()
@@ -58,4 +62,11 @@ Instrument_muzical& Instrument_muzical::operator=(const Instrument_muzical& copi
     denumire = copie.denumire;
     pret = copie.pret;
     return *this;
+}
+
+bool Instrument_muzical::operator ==(const Instrument_muzical& i)
+{
+    if(denumire == i.denumire && pret==i.pret)
+        return true;
+    return false;
 }

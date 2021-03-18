@@ -63,3 +63,10 @@ std::istream& operator >>(std::istream& in, Persoana& pers)
     in >> pers.nume >> pers.varsta;
     return in;
 }
+
+bool Persoana::operator ==(const Persoana& p)
+{
+    if(nume == p.nume && varsta==p.varsta)
+        return true;
+    return false;
+}

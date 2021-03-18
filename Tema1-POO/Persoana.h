@@ -22,6 +22,7 @@ public:
     std::string to_string();
     friend std::ostream& operator <<(std::ostream&, const Persoana&);
     friend std::istream& operator >>(std::istream&, Persoana&);
+    bool operator ==(const Persoana&);
 
 private:
     std::string nume;
