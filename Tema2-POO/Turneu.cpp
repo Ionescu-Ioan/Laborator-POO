@@ -18,6 +18,11 @@ Turneu::Turneu()
 
 }
 
+std::vector <std::string> Turneu::get_orase()
+{
+    return orase;
+}
+
 Turneu::~Turneu()
 {
 #ifdef LOCAL
@@ -52,7 +57,7 @@ void Turneu::remove_oras(std::string oras)
 
 std::ostream& operator <<(std::ostream& out, Turneu& t)
 {
-    out << "An desfasurare turneu: "<<t.an << ", orase: ";
+    out << "An desfasurare turneu: "<<t.an << "; Orase: ";
     for(int i=0 ; i<t.orase.size(); ++i)
         out << t.orase[i] << ", ";
     out << "\n";

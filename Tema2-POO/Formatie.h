@@ -20,6 +20,7 @@ class Formatie
 {
 public:
     Formatie(const std::string &nume_formatie);
+    Formatie(){}
     ~Formatie();
 
     void add_muzicant(Muzicant&);
@@ -29,6 +30,7 @@ public:
     std::vector <Muzicant> get_muzicanti();
     std::vector <Cantaret> get_cantareti();
     std::vector <Vocalist> get_vocalisti();
+    std::vector <Turneu> get_turnee();
     void add_melodie(const Melodie&);
     void add_vocalist(Vocalist&);
     void remove_vocalist(Vocalist&);
@@ -44,6 +46,7 @@ public:
     void afisare_melodii();
     void update_membrii();
     void afisare_membrii();
+    std::string get_nume_formatie();
 
 private:
     std::string nume_formatie;

@@ -37,7 +37,7 @@ int Melodie::get_anul_lansarii()
 }
 std::ostream& operator <<(std::ostream& out, Melodie& m)
 {
-    out << "nume melodie: "<<m.get_nume_melodie() << ", durata: " << m.get_durata() << " minute"<< ", anul lansarii: " << m.get_anul_lansarii() << " ";
+    out << "Nume melodie: "<<m.get_nume_melodie() << "; Durata: " << m.get_durata() << " minute"<< "; Anul lansarii: " << m.get_anul_lansarii() << " ";
     out << "\n";
     return out;
 }

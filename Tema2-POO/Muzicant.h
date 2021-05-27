@@ -11,7 +11,7 @@ class Muzicant : virtual public Persoana
 {
 public:
     Muzicant(std::string nume, std::string instrument, int varsta, float pret = 0.0);
-    //Muzicant(const Persoana& p, const Instrument_muzical& i);
+    Muzicant(){}
     ~Muzicant();
     void set_instrument(Instrument_muzical i);
     virtual void afisare();

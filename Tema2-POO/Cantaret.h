@@ -13,7 +13,9 @@ class Cantaret: virtual public Muzicant, virtual public Vocalist
     std::string nume_scena;
 public:
     Cantaret(std::string nume, int varsta, std::string denumire_instrument, std::string gen_muzical, std::string nume_scena);
+    Cantaret(){}
     ~Cantaret();
+    std::string get_nume_scena();
     void afisare();
     bool operator ==(const Cantaret&);
     friend std::ostream& operator <<(std::ostream& , const Cantaret&);

@@ -12,6 +12,11 @@ Cantaret::~Cantaret()
 {
 }
 
+std::string Cantaret::get_nume_scena()
+{
+    return nume_scena;
+}
+
 bool Cantaret::operator ==(const Cantaret& c)
 {
     Persoana p(nume, varsta);
@@ -22,12 +27,12 @@ bool Cantaret::operator ==(const Cantaret& c)
 
 void Cantaret::afisare()
 {
-    std::cout <<"NUME: " << nume << ", " << "VARSTA: " << varsta << " de ani" << ", GEN MUZICAL: " << gen_muzical << ", INSTRUMENT: " << ins << ", NUME DE SCENA: " << nume_scena <<"\n";
+    std::cout <<"NUME: " << nume << ", " << "VARSTA: " << varsta << " de ani" << ", GEN MUZICAL: " << gen_muzical << ", INSTRUMENT: " << ins << ", NUME DE SCENA: " << nume_scena;
 }
 
 std::ostream& operator <<(std::ostream& out , const Cantaret& c)
 {
     Persoana p = Persoana(c.nume, c.varsta);
-    out << p << " " << c.ins << " " << c.gen_muzical << " " << c.nume_scena <<"\n";
+    out << p << " " << c.ins << " " << c.gen_muzical << " " << c.nume_scena;
     return out;
 }

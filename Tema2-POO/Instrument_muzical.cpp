@@ -48,7 +48,7 @@ void Instrument_muzical::set_denumire(std::string &d)
 std::ostream& operator <<(std::ostream& out, const Instrument_muzical& i)
  {
     //float f = std::round(i.pret*100)/100.0;
-    out << i.denumire + "-pret: " + f2s(i.pret) + " ";
+    out << i.denumire;
     return out;
 }
 

@@ -13,6 +13,11 @@ Formatie::Formatie(const std::string &nume_formatie)
     this->nume_formatie = nume_formatie;
 }
 
+std::string Formatie::get_nume_formatie()
+{
+    return nume_formatie;
+}
+
 void Formatie::add_muzicant(Muzicant &m)
 {
     v.push_back(m);
@@ -96,6 +101,11 @@ void Formatie::remove_cantaret(Cantaret& x)
             break;
         }
 
+}
+
+std::vector <Turneu> Formatie::get_turnee()
+{
+    return turnee;
 }
 
 void Formatie::afisare_muzicanti()

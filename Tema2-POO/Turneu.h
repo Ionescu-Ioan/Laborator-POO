@@ -17,6 +17,7 @@ public:
     ~Turneu();
     void set_an(int);
     int get_an();
+    std::vector <std::string> get_orase();
     void add_oras(std::string);
     void remove_oras(std::string);
     friend std::ostream& operator <<(std::ostream&, Turneu&);
