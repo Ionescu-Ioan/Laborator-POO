@@ -1,0 +1,18 @@
+Iris2
+Vio 45
+2
+Alex 25 chitara
+Mihai 31 clape
+1
+Ionel 20 rock
+2
+Bogda 35 chitara rock Pepe
+George 28 chitara hard_rock Soimul
+4
+De_vei_pleca 5 2011
+Strada_ta 3 2012
+Somn_bizar 3 2009
+Pe_ape 4 2015
+2
+2021 Cluj Brasov Iasi 
+2022 Constanta Bucuresti Timisoara 
