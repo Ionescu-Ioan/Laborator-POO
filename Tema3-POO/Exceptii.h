@@ -6,6 +6,7 @@
 #define TEMA1_POO_EXCEPTII_H
 #include <string>
 #include "rlutil.h"
+#include "portable_file_dialogs.h"
 #include <cstdlib>
 #include "Utilitati.cpp"
 #include "exception"
@@ -19,7 +20,7 @@ public:
     void afisare()
     {
         std::string mesaj = "Fisierul: "+s+" nu exista sau calea nu este corecta!\n";
-        MessageBox(nullptr, mesaj.c_str(), "Avertisment", MB_OK);
+        pfd::message ("Eroare fisier!", mesaj);
     }
 };
 
@@ -44,12 +45,11 @@ public:
     void afisare()
     {
         if(ok==1)
-
-            MessageBox(nullptr, "Varsta a fost introdusa gresit. Varsta nu poate fi < 14", "Persoana incorecta", MB_OK);
+            pfd::message ("Eroare varsta persoana!", "Varsta a fost introdusa gresit. Varsta nu poate fi < 14");
       else if(ok==2)
         {
           std::string mesaj = "Numele "+nume+" nu este corect!";
-            MessageBox(nullptr, mesaj.c_str(), "Persoana incorecta", MB_OK);
+            pfd::message("Eroare nume persoana!", mesaj);
         }
 
 
@@ -65,7 +65,7 @@ public:
     }
     void afisare(){
         std::string mesaj = "Durata melodiei "+v2s(durata)+" nu este corecta\n";
-        MessageBox(nullptr, mesaj.c_str(), "Melodie incorecta", MB_OK);
+        pfd::message("Eroare melodie!", mesaj);
     }
 };
 
@@ -78,7 +78,7 @@ public:
     }
     void afisare(){
         std::string mesaj = "Lista de orase a turneului din anul "+v2s(an)+" nu poate fi vida\n";
-        MessageBox(nullptr, mesaj.c_str(), "Turneu incorecta", MB_OK);
+        pfd::message("Eroare turneu!", mesaj);
     }
 };
 
