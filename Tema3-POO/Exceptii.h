@@ -5,7 +5,7 @@
 #ifndef TEMA1_POO_EXCEPTII_H
 #define TEMA1_POO_EXCEPTII_H
 #include <string>
-#include <windows.h>
+#include "rlutil.h"
 #include <cstdlib>
 #include "Utilitati.cpp"
 #include "exception"

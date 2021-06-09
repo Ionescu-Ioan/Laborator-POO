@@ -9,7 +9,6 @@
 //#include "Vocalist.h"
 //#include <iomanip>
 //#include "portable_file_dialogs.h"
-//#include "windows.h"
 #include "Exceptii.h"
 
 
